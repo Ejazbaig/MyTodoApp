@@ -1,0 +1,133 @@
+
+/* only styling applicable
+#container ul li input[type='checkbox']:checked+label{
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.3);
+} */
+
+/* for striking off
+#container ul li input[type='checkbox']:checked+label{
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.3);
+} */
+
+
+body {
+    background-color: rgba(255, 255, 255, 0.938);
+}
+
+.mainHeading {
+    background-color: #3399ff;  
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+.todoActionBar {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.addTaskTextbox {
+    width: 600px;
+    height: 30px;
+    text-align: center; 
+    border-radius: 12px;
+    margin-right: 12px;
+}
+
+.todoButton,.todoAddButton {
+    height: 35px;
+    width: 130px;
+    background-color: #3399ff; 
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    margin-right: 12px;
+}
+
+.todoListWrapper {
+    justify-content: center;
+}
+
+.todoCheckBox {
+    margin: 0px;
+}
+
+.itemList {
+    width: 600px;
+    text-align: justify;
+    padding-left: 5px;      
+}
+
+.icon {
+    margin-left: 10px;
+}
+
+.todoItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #0000001a;
+    margin: auto;
+    width: 70%;
+}
+
+.todoDescription {
+    width: 70%;
+    overflow-wrap: break-word;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.todoItemTemplate {
+    visibility: hidden;
+}
+
+.strikeThrough {
+    text-decoration: line-through;
+}
+
+.selectDeselectAllContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    width: 180px;
+}
+
+.todoSelectDeslectAllCheckBox {
+    margin-right: 4px;
+}
+
+.selectDeselectLabel {
+    font-size: 13px;
+}
+
+[role="button"]:hover {
+    cursor: pointer;
+}
+
+[role="row"]:hover {
+    cursor: grab;
+}
+
+[role="row"]:active {
+    cursor: grabbing;
+}
+
+
+/* 
+li{
+    list-style: none;
+}
+
+label {
+    width:600px;
+    display: inline-block;
+  } */

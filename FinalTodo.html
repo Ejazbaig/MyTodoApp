@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Todo Site</title>
+        <link rel="stylesheet" type="text/css" href="FinalTodo.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <h1 class="mainHeading" id="heading">TODO LIST</h1>
+        <div class="todoActionBar" id="todoActionBar">    
+            <input type="text" class="addTaskTextbox" id="todoAddTextBox" autofocus placeholder="Enter the task to add" onkeydown=todoTextBoxKeyDownHandler(event)>
+            <button type="button" role="button" class="todoButton" id="todoAddbutton" onclick="addItem()"> Add </button>
+            <!-- <button type="button" class="todoButton" id="todoDeleteButton" onclick="deleteAllItems()"> Delete </button> -->
+            <button type="button" role="button" class="todoButton" id="todoDeleteSelectedButton" onclick="multiSelectActionHandler(TODO_DELETE_SELECTED_ACTION_TYPE)"> Delete Selected</button>
+            <!-- <button type="button" class="todoButton" id="todoMarkAllCompletedButton" onclick="markAllComplete()"> Mark All Completed</button> -->
+            <button type="button" role="button" class="todoButton" id="todoMarkAllCompletedButton" onclick="multiSelectActionHandler(TODO_MARK_SELECTED_ACTION_TYPE)"> Mark Selected</button>
+            <div class="selectDeselectAllContainer todoButton">
+                <input type="checkbox" role="button" class="todoSelectDeslectAllCheckBox" id="todoSelectDeslectAll" onclick="selectAndDeselectAll(event)" >
+                <div class="selectDeselectLabel" >Select / Deselect All</div>     
+            </div>
+        </div>
+        <hr/>
+        <div class="todoListWrapper" id="todoListWrapper" ondrop="onTodoItemDrop(event)"></div>    
+
+        <div role="row" class="todoItemContainer todoItemTemplate" draggable="true" id="todoItemContainer" ondragover="onTodoItemDragOver(event)" ondragstart="onTodoItemDragStart(event)" >
+            <input role="button" type="checkbox" class="todoCheckBox" id="todoCheckBox">
+            <div class="todoDescription" id="todoDescription">Item 1</div> 
+            <i role="button" class="fa fa-pencil-square-o icon" id="editIcon" onclick="editTodoItem(event)"></i>
+            <i role="button" class="fa fa-trash icon" id="deleteIcon" onclick="deleteTodoItem(event)"></i>
+            <i role="button" class="fas fa-strikethrough icon" id="strikeThrough" onclick="todoItemMarkComplete(event)"></i>
+        </div>    
+        <script src="FinalTodo.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </body>
+</html>
+
+
+
+
+    <!-- for division
+        <input type="checkbox" class="checkbox">
+            <div class="itemList" id="itemList">First Item</div>
+            <i class="fa fa-pencil-square-o icon" aria-hidden="true" onclick="todoEditIcon"></i>
+            <i class="fa fa-trash icon" onclick="todoDeleteIcon"></i>
+            <i class="fas fa-strikethrough icon" onclick="todoStrikeIcon"></i> -->
